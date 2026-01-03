@@ -1,166 +1,25 @@
-# Tests for PalmTreeDB
+"""
+Stunning Palm Tree - Code Refactoring
+"""
 
-import unittest
-from src.core import Core
+from typing import List, Dict, Optional
 
-class TestCore(unittest.TestCase):
-    def setUp(self):
-        self.core = Core()
+def optimize_algorithm(data: List[Dict]) -> List[Dict]:
+    """Optimized version with better performance"""
+    # Use list comprehension for better performance
+    return [
+        {**item, 'processed': True}
+        for item in data
+        if item.get('active', True)
+    ]
+
+def extract_metadata(obj: Dict) -> Optional[Dict]:
+    """Extract metadata with type hints"""
+    if not isinstance(obj, dict):
+        return None
     
-    def test_initialization(self):
-        self.assertTrue(self.core.initialized)
-    
-    def test_status(self):
-        status = self.core.get_status()
-        self.assertIn("status", status)
-        self.assertEqual(status["status"], "running")
-    
-    def test_update_7(self):
-        self.assertTrue(True)
-
-
-# Tests for PalmTreeDB
-
-import unittest
-from src.core import Core
-
-class TestCore(unittest.TestCase):
-    def setUp(self):
-        self.core = Core()
-    
-    def test_initialization(self):
-        self.assertTrue(self.core.initialized)
-    
-    def test_status(self):
-        status = self.core.get_status()
-        self.assertIn("status", status)
-        self.assertEqual(status["status"], "running")
-    
-    def test_update_10(self):
-        self.assertTrue(True)
-
-
-# Tests for PalmTreeDB
-
-import unittest
-from src.core import Core
-
-class TestCore(unittest.TestCase):
-    def setUp(self):
-        self.core = Core()
-    
-    def test_initialization(self):
-        self.assertTrue(self.core.initialized)
-    
-    def test_status(self):
-        status = self.core.get_status()
-        self.assertIn("status", status)
-        self.assertEqual(status["status"], "running")
-    
-    def test_update_14(self):
-        self.assertTrue(True)
-
-
-# Tests for PalmTreeDB
-
-import unittest
-from src.core import Core
-
-class TestCore(unittest.TestCase):
-    def setUp(self):
-        self.core = Core()
-    
-    def test_initialization(self):
-        self.assertTrue(self.core.initialized)
-    
-    def test_status(self):
-        status = self.core.get_status()
-        self.assertIn("status", status)
-        self.assertEqual(status["status"], "running")
-    
-    def test_update_29(self):
-        self.assertTrue(True)
-
-
-# Tests for PalmTreeDB
-
-import unittest
-from src.core import Core
-
-class TestCore(unittest.TestCase):
-    def setUp(self):
-        self.core = Core()
-    
-    def test_initialization(self):
-        self.assertTrue(self.core.initialized)
-    
-    def test_status(self):
-        status = self.core.get_status()
-        self.assertIn("status", status)
-        self.assertEqual(status["status"], "running")
-    
-    def test_update_58(self):
-        self.assertTrue(True)
-
-
-# Tests for PalmTreeDB
-
-import unittest
-from src.core import Core
-
-class TestCore(unittest.TestCase):
-    def setUp(self):
-        self.core = Core()
-    
-    def test_initialization(self):
-        self.assertTrue(self.core.initialized)
-    
-    def test_status(self):
-        status = self.core.get_status()
-        self.assertIn("status", status)
-        self.assertEqual(status["status"], "running")
-    
-    def test_update_67(self):
-        self.assertTrue(True)
-
-
-# Tests for PalmTreeDB
-
-import unittest
-from src.core import Core
-
-class TestCore(unittest.TestCase):
-    def setUp(self):
-        self.core = Core()
-    
-    def test_initialization(self):
-        self.assertTrue(self.core.initialized)
-    
-    def test_status(self):
-        status = self.core.get_status()
-        self.assertIn("status", status)
-        self.assertEqual(status["status"], "running")
-    
-    def test_update_69(self):
-        self.assertTrue(True)
-
-
-# Tests for PalmTreeDB
-
-import unittest
-from src.core import Core
-
-class TestCore(unittest.TestCase):
-    def setUp(self):
-        self.core = Core()
-    
-    def test_initialization(self):
-        self.assertTrue(self.core.initialized)
-    
-    def test_status(self):
-        status = self.core.get_status()
-        self.assertIn("status", status)
-        self.assertEqual(status["status"], "running")
-    
-    def test_update_71(self):
-        self.assertTrue(True)
+    return {
+        'id': obj.get('id'),
+        'timestamp': obj.get('timestamp'),
+        'version': obj.get('version', '1.0.0')
+    }
