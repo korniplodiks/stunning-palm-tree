@@ -36,3 +36,8 @@ This project is actively maintained and developed.
 ## License
 
 MIT
+
+
+## Update 17
+
+Latest improvements and bug fixes.
